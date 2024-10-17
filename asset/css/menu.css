@@ -1,0 +1,47 @@
+/* Style de base */
+body {
+    font-family: Arial, sans-serif;
+}
+
+aside {
+    width: 200px;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    color: white;
+    max-height: 0; /* Menu fermé */
+    transition: max-height 0.5s ease-in-out; /* Animation d'ouverture/fermeture */
+    overflow: hidden;
+}
+
+ul li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+
+ul li:hover {
+    background-color: #444;
+}
+
+label {
+    display: block;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ ul {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in-out;
+}
