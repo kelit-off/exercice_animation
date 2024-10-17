@@ -1,0 +1,79 @@
+.chemin_cube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 90vh;
+    width: 90vw;
+    padding: 10px;
+}
+
+.cube {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border: 2px solid black;
+    animation: rotation 2s infinite linear, chemin 4s infinite linear;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Partie animation */
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes chemin {
+    0% {
+        top: 0%;
+        left: 0%;
+        background-color: red;
+    }
+    25% {
+        top: 0%;
+        left: 100%;
+        background-color: blue;
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+        background-color: green;
+    }
+    75% {
+        top: 100%;
+        left: 0%;
+        background-color: yellow;
+    }
+    100% {
+        top: 0%;
+        left: 0%;
+        background-color: red;
+    }
+}
+
+/* Ajout des délais pour chaque carré */
+.carre1 {
+    animation-delay: 0s;
+}
+
+.carre2 {
+    animation-delay: 0.5s;
+}
+
+.carre3 {
+    animation-delay: 1s;
+}
+
+.carre4 {
+    animation-delay: 1.5s;
+}
